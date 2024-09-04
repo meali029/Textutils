@@ -1,38 +1,63 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* App.css */
+body {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    transition: background-color 1s ease, color 0.5s ease;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .navbar-dark {
+    background-color: #11314d;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .navbar-light {
+    background-color: white;
   }
+  
+  textarea {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .container {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  .bttn{
+    z-index: 1;
+  }
+  .alertTran {
+    position: fixed;
+    
+    z-index: 1;
+    top: 20px; /* Adjust the top position as needed */
+    left: 40%;
+    /* transform: translateX(-50%); */
+    width: fit-content;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+@media (max-width:800px) {
+    .alertTran {
+        position: fixed;
+    
+        z-index: 1;
+        top: 20px;
+        width: fit-content;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+    transition: transform 1s ease-out, opacity 1s ease-out;
+        left: 5rem;
+height: 5rem;
+width: 15rem;
+
+    }
+    .alertTran.fadeout {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+.alertTran.fadeout {
+    transform: translateY(-100%);
+    opacity: 0;
 }
